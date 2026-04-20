@@ -1,6 +1,7 @@
-import type { UserRole } from "@prisma/client";
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
+
+type UserRole = "ADMIN" | "CUSTOMER";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   session: { strategy: "jwt" },

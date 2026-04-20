@@ -41,7 +41,7 @@ type SectionId = (typeof SECTIONS)[number]["id"];
 export default function AdminSettingsPage() {
   const [active, setActive] = React.useState<SectionId>("general");
 
-  const [storeName, setStoreName] = React.useState(SITE_CONFIG.name);
+  const [storeName, setStoreName] = React.useState<string>(SITE_CONFIG.name);
   const [email, setEmail] = React.useState("hello@aquaflow.store");
   const [phone, setPhone] = React.useState("+1 (555) 010-0200");
   const [address, setAddress] = React.useState("1200 Irrigation Way, Fresno, CA 93721");
